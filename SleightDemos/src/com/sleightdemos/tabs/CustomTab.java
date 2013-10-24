@@ -1,14 +1,3 @@
-/*
- * 文件名: CustomTab.java
- * 版    权：   
- * 描    述: [该类的简要描述]
- * 创建人: w00138133
- * 创建时间:2010-4-24
- * 
- * 修改人：
- * 修改时间:
- * 修改内容：[修改内容]
- */
 package com.sleightdemos.tabs;
 
 import android.app.Activity;
@@ -25,16 +14,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.TabHost.OnTabChangeListener;
 
 import com.sleightdemos.R;
 
 /**
  * A custom Tab. Tabs are at bottom,contents images and words
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [2010-4-24]
  */
 public class CustomTab extends TabActivity
@@ -57,18 +46,10 @@ public class CustomTab extends TabActivity
 
         tHost = this.getTabHost();
 
-        tHost.addTab(tHost.newTabSpec(Tab1)
-            .setIndicator("")
-            .setContent(R.id.view1));
-        tHost.addTab(tHost.newTabSpec(Tab2)
-            .setIndicator("")
-            .setContent(R.id.view2));
-        tHost.addTab(tHost.newTabSpec(Tab3)
-            .setIndicator("")
-            .setContent(R.id.view3));
-        tHost.addTab(tHost.newTabSpec(Tab4)
-            .setIndicator("")
-            .setContent(R.id.view4));
+        tHost.addTab(tHost.newTabSpec(Tab1).setIndicator("").setContent(R.id.view1));
+        tHost.addTab(tHost.newTabSpec(Tab2).setIndicator("").setContent(R.id.view2));
+        tHost.addTab(tHost.newTabSpec(Tab3).setIndicator("").setContent(R.id.view3));
+        tHost.addTab(tHost.newTabSpec(Tab4).setIndicator("").setContent(R.id.view4));
 
         CustomLayout ct = new CustomLayout(this);
 
@@ -105,14 +86,12 @@ public class CustomTab extends TabActivity
         tv.setGravity(Gravity.CENTER);
         tv.setSingleLine(true);
         tv.setText(s);
-        layout.addView(tv, new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.FILL_PARENT,
+        layout.addView(tv, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT));
 
         ImageView iv = new ImageView(this);
         iv.setImageResource(i);
-        layout.addView(iv, new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.FILL_PARENT,
+        layout.addView(iv, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT));
         return layout;
     }
@@ -157,22 +136,19 @@ public class CustomTab extends TabActivity
             {
                 ImageView iv = new ImageView(activity);
                 iv.setImageResource(R.drawable.icon);
-                layout.addView(iv, new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.FILL_PARENT,
+                layout.addView(iv, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                     LinearLayout.LayoutParams.FILL_PARENT));
             }
             else if (id.equals(Tab2))
             {
                 EditText edit = new EditText(activity);
-                layout.addView(edit, new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.FILL_PARENT,
+                layout.addView(edit, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                     LinearLayout.LayoutParams.FILL_PARENT));
 
                 Button btn = new Button(activity);
                 btn.setText("OK");
                 btn.setWidth(100);
-                layout.addView(btn, new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.FILL_PARENT,
+                layout.addView(btn, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                     LinearLayout.LayoutParams.FILL_PARENT));
 
                 RadioGroup rGroup = new RadioGroup(activity);
@@ -184,20 +160,16 @@ public class CustomTab extends TabActivity
                 radio2.setText("Radio B");
                 rGroup.addView(radio2);
 
-                layout.addView(rGroup, new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                layout.addView(rGroup, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
             }
             else if (id.equals(Tab3))
             {
 
-                LinearLayout.LayoutParams param3 = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.FILL_PARENT,
+                LinearLayout.LayoutParams param3 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                     LinearLayout.LayoutParams.FILL_PARENT);
 
-                layout.addView(inflaterHelper.inflate(R.layout.top_right_corner,
-                    null),
-                    param3);
+                layout.addView(inflaterHelper.inflate(R.layout.top_right_corner, null), param3);
             }
             else if (id.equals(Tab4))
             {

@@ -1,14 +1,3 @@
-/*
- * 文件名: XMLParserEngine.java
- * 版    权：   
- * 描    述: [该类的简要描述]
- * 创建人: w00138133
- * 创建时间:2011-7-19
- * 
- * 修改人：
- * 修改时间:
- * 修改内容：[修改内容]
- */
 package com.sleightdemos.util;
 
 import java.io.ByteArrayInputStream;
@@ -32,7 +21,7 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  * XML至对象解析
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [v1.0, 2011-7-19]
  */
 public class XMLParserEngine<T> extends DefaultHandler
@@ -112,8 +101,7 @@ public class XMLParserEngine<T> extends DefaultHandler
     }
 
     @Override
-    public void characters(char[] ch, int start, int length)
-        throws SAXException
+    public void characters(char[] ch, int start, int length) throws SAXException
     {
         sb.append(ch, start, length);
     }
@@ -126,8 +114,7 @@ public class XMLParserEngine<T> extends DefaultHandler
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName)
-        throws SAXException
+    public void endElement(String uri, String localName, String qName) throws SAXException
     {
         // TODO Auto-generated method stub
         super.endElement(uri, localName, qName);
@@ -155,32 +142,28 @@ public class XMLParserEngine<T> extends DefaultHandler
     }
 
     @Override
-    public void ignorableWhitespace(char[] ch, int start, int length)
-        throws SAXException
+    public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException
     {
         // TODO Auto-generated method stub
         super.ignorableWhitespace(ch, start, length);
     }
 
     @Override
-    public void notationDecl(String name, String publicId, String systemId)
-        throws SAXException
+    public void notationDecl(String name, String publicId, String systemId) throws SAXException
     {
         // TODO Auto-generated method stub
         super.notationDecl(name, publicId, systemId);
     }
 
     @Override
-    public void processingInstruction(String target, String data)
-        throws SAXException
+    public void processingInstruction(String target, String data) throws SAXException
     {
         // TODO Auto-generated method stub
         super.processingInstruction(target, data);
     }
 
     @Override
-    public InputSource resolveEntity(String publicId, String systemId)
-        throws IOException, SAXException
+    public InputSource resolveEntity(String publicId, String systemId) throws IOException, SAXException
     {
         // TODO Auto-generated method stub
         return super.resolveEntity(publicId, systemId);
@@ -207,13 +190,11 @@ public class XMLParserEngine<T> extends DefaultHandler
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName,
-        Attributes attributes) throws SAXException
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
     {
         for (int i = 0; i < targetFields.length; i++)
         {
-            if (qName.equalsIgnoreCase(targetFields[i].getClass()
-                .getSimpleName()))
+            if (qName.equalsIgnoreCase(targetFields[i].getClass().getSimpleName()))
             {
 
             }
@@ -225,16 +206,15 @@ public class XMLParserEngine<T> extends DefaultHandler
     }
 
     @Override
-    public void startPrefixMapping(String prefix, String uri)
-        throws SAXException
+    public void startPrefixMapping(String prefix, String uri) throws SAXException
     {
         // TODO Auto-generated method stub
         super.startPrefixMapping(prefix, uri);
     }
 
     @Override
-    public void unparsedEntityDecl(String name, String publicId,
-        String systemId, String notationName) throws SAXException
+    public void unparsedEntityDecl(String name, String publicId, String systemId, String notationName)
+        throws SAXException
     {
         // TODO Auto-generated method stub
         super.unparsedEntityDecl(name, publicId, systemId, notationName);

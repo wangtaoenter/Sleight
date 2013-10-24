@@ -9,7 +9,7 @@ import com.sleightdemos.R;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [v1.0, 2011-7-21]
  */
 public class TTTA extends Activity

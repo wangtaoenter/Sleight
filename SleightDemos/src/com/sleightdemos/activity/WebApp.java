@@ -1,14 +1,3 @@
-/*
- * 文件名: WebApp.java
- * 版    权：   
- * 描    述: [该类的简要描述]
- * 创建人: w00138133
- * 创建时间:2011-6-30
- * 
- * 修改人：
- * 修改时间:
- * 修改内容：[修改内容]
- */
 package com.sleightdemos.activity;
 
 import android.app.Activity;
@@ -27,7 +16,7 @@ import com.sleightdemos.R;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [v1.0, 2011-6-30]
  */
 public class WebApp extends Activity
@@ -53,27 +42,23 @@ public class WebApp extends Activity
             public void exit(String title, String message)
             {
                 Log.d(TAG, "exitJS called");
-                AlertDialog dialog = new AlertDialog.Builder(WebApp.this)
-                    .setTitle(title).setMessage(message).setPositiveButton(
-                        "Yes", new DialogInterface.OnClickListener()
+                AlertDialog dialog = new AlertDialog.Builder(WebApp.this).setTitle(title).setMessage(message)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                    {
+
+                        public void onClick(DialogInterface dialog, int which)
                         {
+                            exitWebApp();
+                        }
 
-                            public void onClick(DialogInterface dialog,
-                                int which)
-                            {
-                                exitWebApp();
-                            }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener()
+                    {
 
-                        }).setNegativeButton("No",
-                        new DialogInterface.OnClickListener()
+                        public void onClick(DialogInterface dialog, int which)
                         {
+                        }
 
-                            public void onClick(DialogInterface dialog,
-                                int which)
-                            {
-                            }
-
-                        }).create();
+                    }).create();
                 dialog.show();
             }
         }, "webapp");

@@ -1,10 +1,3 @@
-/*
- * 文件名: Security.java
- * 版    权：   
- * 描    述: 加解密相关
- * 创建人: w00138133
- * 创建时间:2011-8-27
- */
 package com.sleightdemos.util;
 
 import java.io.ByteArrayOutputStream;
@@ -29,7 +22,7 @@ import android.util.Log;
  * 
  * Security 提供了一个安全算法类,其中包括DES AES对称密码算法和SHA散列算法.
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [V1.0, 2011-8-27]
  */
 public final class Security
@@ -55,10 +48,8 @@ public final class Security
      * @throws NoSuchPaddingException
      * @throws Exception
      */
-    public static byte[] symmetricEncryptoDES(byte[] byteSource)
-        throws IllegalBlockSizeException, BadPaddingException, IOException,
-        NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException,
-        NoSuchPaddingException
+    public static byte[] symmetricEncryptoDES(byte[] byteSource) throws IllegalBlockSizeException, BadPaddingException,
+        IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException, NoSuchPaddingException
     {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         int mode = Cipher.ENCRYPT_MODE;
@@ -114,10 +105,8 @@ public final class Security
      * 
      * @throws Exception the exception
      */
-    public static byte[] symmetricDecryptoDES(byte[] byteSource)
-        throws NoSuchAlgorithmException, InvalidKeyException,
-        InvalidKeySpecException, NoSuchPaddingException, IOException,
-        IllegalBlockSizeException, BadPaddingException
+    public static byte[] symmetricDecryptoDES(byte[] byteSource) throws NoSuchAlgorithmException, InvalidKeyException,
+        InvalidKeySpecException, NoSuchPaddingException, IOException, IllegalBlockSizeException, BadPaddingException
     {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         int mode = Cipher.DECRYPT_MODE;
@@ -169,8 +158,7 @@ public final class Security
         {
             try
             {
-                byte[] afterChange = symmetricEncryptoDES(pwOfString
-                    .getBytes("UTF8"));
+                byte[] afterChange = symmetricEncryptoDES(pwOfString.getBytes("UTF8"));
                 output = new String(Base64.encode(afterChange, Base64.DEFAULT));
                 return output;
             }
@@ -197,8 +185,7 @@ public final class Security
         {
             try
             {
-                byte[] sourceByte = Base64.decode(input.getBytes(),
-                    Base64.DEFAULT);
+                byte[] sourceByte = Base64.decode(input.getBytes(), Base64.DEFAULT);
                 //解密并转换成字符串
                 output = new String(symmetricDecryptoDES(sourceByte), "UTF8");
             }
@@ -220,8 +207,7 @@ public final class Security
      */
     public static String md5(String s)
     {
-        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-            'A', 'B', 'C', 'D', 'E', 'F' };
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
         try
         {
             byte[] strTemp = s.getBytes();
@@ -254,8 +240,7 @@ public final class Security
      * @return 经过散列计算的数据
      * @throws NoSuchAlgorithmException
      */
-    public static byte[] hashMethod(byte[] byteSource)
-        throws NoSuchAlgorithmException
+    public static byte[] hashMethod(byte[] byteSource) throws NoSuchAlgorithmException
     {
         MessageDigest currentAlgorithm = MessageDigest.getInstance("SHA-1");
         currentAlgorithm.reset();
@@ -320,9 +305,8 @@ public final class Security
     public static SecretKeySpec getKeySpecForAES()
     {
         //use bytes of "softclient" as the key
-        byte[] bytes = {(byte) 0x73, (byte) 0x6f, (byte) 0x66, (byte) 0x74,
-            (byte) 0x63, (byte) 0x6c, (byte) 0x69, (byte) 0x65, (byte) 0x6e,
-            (byte) 0x74 };
+        byte[] bytes = {(byte) 0x73, (byte) 0x6f, (byte) 0x66, (byte) 0x74, (byte) 0x63, (byte) 0x6c, (byte) 0x69,
+            (byte) 0x65, (byte) 0x6e, (byte) 0x74 };
 
         SecretKeySpec spec = new SecretKeySpec(bytes, "AES");
         return spec;
@@ -380,8 +364,7 @@ public final class Security
 
             if (position < length)
             {
-                pw.write(cipher
-                    .doFinal(byteSource, position, length - position));
+                pw.write(cipher.doFinal(byteSource, position, length - position));
             }
             else
             {
@@ -440,8 +423,7 @@ public final class Security
             Cipher cipher = Cipher.getInstance("AES");
             cipher.init(Cipher.DECRYPT_MODE, spec);
 
-            byte[] byteSource = Base64.decode(text.getBytes("UTF8"),
-                Base64.DEFAULT);
+            byte[] byteSource = Base64.decode(text.getBytes("UTF8"), Base64.DEFAULT);
             int blockSize = cipher.getBlockSize();
             int position = 0;
             int length = byteSource.length;
@@ -461,8 +443,7 @@ public final class Security
             }
             if (position < length)
             {
-                pw.write(cipher
-                    .doFinal(byteSource, position, length - position));
+                pw.write(cipher.doFinal(byteSource, position, length - position));
             }
             else
             {

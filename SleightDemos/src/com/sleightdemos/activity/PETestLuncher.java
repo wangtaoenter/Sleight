@@ -13,7 +13,7 @@ import com.sleightdemos.R;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [2010-4-29]
  */
 public class PETestLuncher extends Activity
@@ -37,7 +37,7 @@ public class PETestLuncher extends Activity
             Bundle bundle = new Bundle();
             bundle.putString("mediaPath", "file:///sdcard/1.3gp");
             intent.putExtras(bundle);
-            intent.setClassName("com.huawei.PELib", "com.huawei.PELib.PETest");
+            intent.setClassName("com.", "com");
             startActivity(intent);
         }
     };

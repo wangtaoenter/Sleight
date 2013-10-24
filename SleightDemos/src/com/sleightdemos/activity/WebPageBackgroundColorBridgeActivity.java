@@ -1,17 +1,4 @@
-/*
- * 文件名: WebPageBackgroundColorBridgeActivity.java
- * 版    权：   
- * 描    述: [该类的简要描述]
- * 创建人: w00138133
- * 创建时间:2010-4-8
- * 
- * 修改人：
- * 修改时间:
- * 修改内容：[修改内容]
- */
 package com.sleightdemos.activity;
-
-import com.sleightdemos.R;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -27,11 +14,13 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
+import com.sleightdemos.R;
+
 /**
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [2010-4-8]
  */
 public class WebPageBackgroundColorBridgeActivity extends Activity
@@ -60,9 +49,7 @@ public class WebPageBackgroundColorBridgeActivity extends Activity
 
             /*
              * (non-Javadoc)
-             * @see
-             * android.webkit.WebViewClient#shouldOverrideUrlLoading(android
-             * .webkit.WebView, java.lang.String)
+             * @see android.webkit.WebViewClient#shouldOverrideUrlLoading(android .webkit.WebView, java.lang.String)
              */
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url)
@@ -108,14 +95,11 @@ public class WebPageBackgroundColorBridgeActivity extends Activity
         colorBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener()
         {
 
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                boolean fromTouch)
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromTouch)
             {
                 float p100 = progress / 100.0f;
-                webView.loadUrl(String.format(
-                    "javascript:{document.body.style.backgroundColor='#%06x'}",
-                    Color.HSVToColor(new float[] {360 * p100, p100, 1 - p100 })
-                        & OPAQUE));
+                webView.loadUrl(String.format("javascript:{document.body.style.backgroundColor='#%06x'}",
+                    Color.HSVToColor(new float[] {360 * p100, p100, 1 - p100 }) & OPAQUE));
             }
 
             public void onStartTrackingTouch(SeekBar seekBar)

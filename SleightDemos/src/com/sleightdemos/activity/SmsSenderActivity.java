@@ -21,7 +21,7 @@ import com.sleightdemos.R;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [Examlevel2, 2011-6-16]
  */
 public class SmsSenderActivity extends Activity

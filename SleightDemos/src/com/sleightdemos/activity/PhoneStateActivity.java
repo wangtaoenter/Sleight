@@ -12,7 +12,7 @@ import android.util.Log;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version [2010-4-26]
  */
 public class PhoneStateActivity extends Activity

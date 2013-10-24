@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.sleightdemos.view;
 
 import android.content.Context;
@@ -8,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * @author w00138133
+ * @author wangtaoenter
  * 
  */
 public class MyListView extends ListView

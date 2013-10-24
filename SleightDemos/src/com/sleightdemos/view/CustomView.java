@@ -1,14 +1,3 @@
-/*
- * 文件名: CustomView.java
- * 版    权：   
- * 描    述: [该类的简要描述]
- * 创建人: w00138133
- * 创建时间:2010-3-30
- * 
- * 修改人：
- * 修改时间:
- * 修改内容：[修改内容]
- */
 package com.sleightdemos.view;
 
 import android.content.Context;
@@ -23,7 +12,7 @@ import android.widget.ImageView;
  * [一句话功能简述]<BR>
  * [功能详细描述]
  * 
- * @author w00138133
+ * @author wangtaoenter
  * @version
  */
 public class CustomView extends ImageView
