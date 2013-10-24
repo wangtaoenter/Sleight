@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.sleightdemos" android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:name=".SleightDemosApplication"
+		android:label="@string/app_name">
+		<activity android:name=".Main" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.CustomViewActivity"
+			android:label="@string/custom_img_view">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.StartOtherActivity"
+			android:label="@string/start_activity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.StartOtherService"
+			android:label="@string/start_service">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.EarthAnimationActivity"
+			android:label="@string/earth_animation">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.WebPageBackgroundColorBridgeActivity"
+			android:label="@string/web_page_background">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.TopRightCornerImgActivity"
+			android:label="@string/top_right_corner_img">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.dialogtheme.DialogList"
+			android:label="@string/dialog_list">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.dialogtheme.DialogTheme"
+			android:label="@string/dialog_theme" android:theme="@android:style/Theme.Dialog">
+			<intent-filter>
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".tabs.BottomTab" android:label="Tabs/BottomTab">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".tabs.CustomTab" android:label="Tabs/CustomTab">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.PhoneStateActivity"
+			android:label="@string/phone_state">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.MList" android:label="@string/mlist">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.SplashScreen"
+			android:label="@string/splash_screen">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.GifActivity" android:label="@string/gif_view">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.TextViewTest"
+			android:label="@string/tvt">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.TestApn" android:label="@string/test_apn">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.MyMenuTest" android:label="My Menu">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.MyHomeDemo" android:label="MyHomeDemo">
+			<intent-filter>
+				<!--
+					<action android:name="android.intent.action.MAIN" /> <category
+					android:name="android.intent.category.HOME" />
+				-->
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.AnimSeekBarTest"
+			android:label="AnimSeekBarTest">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.ReadConfigAcitivity"
+			android:label="ReadConfigAcitivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.BuildInfo" android:label="build_infos">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.WifiTest" android:label="WifiTest">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.CircleTextViewActivity"
+			android:label="CircleTextView">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.PlayerActivity"
+			android:label="PlayerActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.CircleMenuActivity"
+			android:label="CircleMenuActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.SmsSenderActivity"
+			android:label="SmsSender">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.WebApp" android:label="WebApp">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.XMLParse" android:label="XMLParse">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.XStreamDemo" android:label="XStreamDemo">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.TurnPageActivity"
+			android:label="TurnPage">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activity.StretchText" android:label="StretchText">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.SecurityTest"
+			android:label="SecurityTest">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.RingerModeChangedActivity"
+			android:label="RingerModeChangedActivity" android:launchMode="singleInstance">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.LoggerTest"
+			android:label="LoggerTest" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.ShareToFB"
+			android:label="ShareToFB" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.AppGridActivity"
+			android:label="AppGrid" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.GrideTabTest"
+			android:label="GrideTabTest" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.OwnTextApperance"
+			android:label="OwnTextApperance" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.MyTabTest"
+			android:label="MyTabTest" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.MusicFxTest"
+			android:label="MusicFx" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+
+		<receiver android:name="com.sleightdemos.activity.RingerModeChangedReceiver">
+			<intent-filter>
+				<action android:name="android.media.RINGER_MODE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		
+		<!-- add for weixin begin -->
+		<receiver
+        	android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver" 
+        	android:permission="com.tencent.mm.oauth.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
+            android:permission="com.tencent.mm.plugin.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
+            </intent-filter>
+        </receiver>
+        <!-- add for weixin end -->
+	</application>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<!-- 加入网络状态查看权限 -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<!-- apn设置权限 -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+	
+	<!-- add for weixin -->
+	 <permission
+        android:name="com.sleightdemos.permission.MMOAUTH_CALLBACK"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.sleightdemos.permission.MM_MESSAGE"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="com.sleightdemos.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="com.sleightdemos.permission.MM_MESSAGE" />
+    <!-- add for weixin edn -->
+	<uses-sdk android:minSdkVersion="7" />
+</manifest> 

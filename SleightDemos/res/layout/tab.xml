@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sleightdemos.widget.MyTabHost
+	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tabhost"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:id="@+id/title" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:footerDividersEnabled="true"
+		android:headerDividersEnabled="true" android:textSize="@dimen/title"
+		android:gravity="center" android:background="@drawable/titlebar"
+		android:textColor="@color/white" />
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<com.sleightdemos.widget.MyTabWidget
+			android:id="@+id/tabs" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:paddingTop="31dip" />
+		<FrameLayout android:id="@+id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="0dip"
+			android:layout_weight="1" />
+	</LinearLayout>
+</com.sleightdemos.widget.MyTabHost>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<LinearLayout android:id="@+id/scroll_arrowhead"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:paddingLeft="6dip"
+		android:paddingRight="6dip"
+		android:gravity="center_vertical"
+		>
+
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/scroll_tab_scroll_left"
+			android:gravity="center_vertical"
+			android:visibility="gone"
+			android:maxHeight="29dip"
+			android:maxWidth="16dip"
+			/>
+
+		<com.huawei.softclient.mtvclient.widget.GalleryTab
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/gallery" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:spacing="0dip"
+			android:layout_weight="1"
+			android:gravity="center_vertical"
+			android:visibility="gone"
+			>
+
+		</com.huawei.softclient.mtvclient.widget.GalleryTab>
+
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/scroll_tab_scroll_right"
+			android:gravity="center_vertical"
+			android:visibility="gone"
+			android:maxHeight="29dip"
+			android:maxWidth="16dip"
+			/>
+
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="horizontal"
+		android:id="@+id/scroll_tab_btn" android:visibility="gone"
+		android:paddingLeft="6dip" android:paddingRight="6dip">
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="GifView">
+		<!-- set *.gif source, as resource id -->
+		<attr name="src" format="integer" />
+
+		<!-- set frequency to update bitmap, as int-->
+		<attr name="delta" format="integer" />
+
+	</declare-styleable>
+</resources>
