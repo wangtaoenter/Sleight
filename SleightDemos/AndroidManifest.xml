@@ -314,7 +314,15 @@
 				<category android:name="com.sleightdemos.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
-
+		
+		<activity android:name=".activity.ShareToWeiXinWeiBo"
+			android:label="ShareToWeiXinWeiBo" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="com.sleightdemos.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
 		<receiver android:name="com.sleightdemos.activity.RingerModeChangedReceiver">
 			<intent-filter>
 				<action android:name="android.media.RINGER_MODE_CHANGED" />
@@ -322,19 +330,11 @@
 		</receiver>
 		
 		<!-- add for weixin begin -->
-		<receiver
-        	android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver" 
-        	android:permission="com.tencent.mm.oauth.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
-            </intent-filter>
-        </receiver>
-        
         <receiver
-            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
+            android:name="com.sleightdemos.reciver.AppRegister"
             android:permission="com.tencent.mm.plugin.permission.SEND" >
             <intent-filter>
-                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
         </receiver>
         <!-- add for weixin end -->
